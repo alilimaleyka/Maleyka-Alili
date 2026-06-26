@@ -7,7 +7,7 @@ public class Tapsirig7 {
         System.out.println("Temperatur: " + Temperatur);
 
         int surет = 95, yanacaq = 0;
-        boolean Sürət = (temp > 0 && temp < 120) || yanacaq > 0;
+        boolean Sürət = (surет > 0 && surет < 120) || yanacaq > 0;
         //"Sürət 0-dan çox, 120-dən az VƏ YA yanacaq 0-dan çoxdur"
         System.out.println("Sürət: " + Sürət);
 
@@ -21,6 +21,6 @@ public class Tapsirig7 {
         int yas = 22;
         boolean Ad = ad.length() > 0 && yas > 18;
         //"Ad boş deyil (uzunluğu 0-dan çoxdur) VƏ yaş 18-dən böyükdür"
-        System.out.println("Ad: " + ad);
+        System.out.println("Ad: " + Ad);
     }
 }
