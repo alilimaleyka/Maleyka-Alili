@@ -15,9 +15,9 @@ public class Tapsiriq2 {
         double UmumiOdenis = a + UmumiFaiz;
         double AylıqOdenis = UmumiOdenis / c;
 
-        System.out.println("Ümumi faiz məbləği: " + UmumiFaiz + "AZN");
-        System.out.println("Ümumi ödəniş: "+ UmumiOdenis + "AZN");
-        System.out.println("Aylıq ödəniş: "+ AylıqOdenis + "AZN");
+        System.out.println("Ümumi faiz məbləği: " + UmumiFaiz + " AZN");
+        System.out.println("Ümumi ödəniş: "+ UmumiOdenis + " AZN");
+        System.out.println("Aylıq ödəniş: "+ AylıqOdenis + " AZN");
 
         sc.close();
 

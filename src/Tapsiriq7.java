@@ -12,7 +12,7 @@ public class Tapsiriq7 {
 
         System.out.println("Casting nəticəsi: " + castingNetice); //Burda double ədədin ondalıq hissəsini silir yazır.
         System.out.println("Yuvarlaqlaşdırma nəticəsi: " + roundNetice); //Burda isə double dəyəri yuvarlaqlaşdırır.
-        //Ama bu nəticələr həmişə eyni ola bilməz. Baxır double dəyərini biz neçə yazırıq. Yuvarlaşdırmada ondalıq 5-dən yuxarı olarsa bu iki dəyər fərqli olur.
+        //Ama bu nəticələr həmişə eyni ola bilməz. Baxır double dəyərini biz neçə yazırıq. Yuvarlaşdırmada ondalıq 5-dən yuxarı olarsa bu iki dəyər fərqli olur. Bunlar hamısı mənfi ədədə də aiddir.
 
         sc.close();
     }

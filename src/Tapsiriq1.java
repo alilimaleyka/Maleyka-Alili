@@ -18,7 +18,7 @@ public class Tapsiriq1 {
         System.out.println("Toplama: "+toplama); //Toplama: 27 (True)
         System.out.println("Çıxma: "+cixma); //Çıxma: 17 (True)
         System.out.println("Vurma: "+vurma); //Vurma: 110 (True)
-        System.out.println("Bölmə: "+bolme); //Bölmə: 4 (False, çünki int/int nəticəsi də int olur, amma bu bölmədə qalıq var.)
+        System.out.println("Bölmə: "+bolme); //Bölmə: 4 (İnt/int nəticəsi də int olur, amma bu bölmədə ondalıq var.)
         System.out.println("Qalıq: "+qaliq); //Qalıq: 2 (True)
 
         sc.close();

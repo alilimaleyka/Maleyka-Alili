@@ -13,7 +13,7 @@ public class Tapsiriq5 {
         int İntEded = (int) BirDoubleEded;
 
         System.out.println("Widening nəticəsi: " +DoubleDoubleEded);
-        System.out.println("Narrowing nəticəsi: " +İntEded); //Burda nəticə 5 çıxdı ama, yazdığım double dəyər 5.5 idi qalıq 0.5 kəsildi.
+        System.out.println("Narrowing nəticəsi: " +İntEded); //Burda nəticə 5 çıxdı ama, yazdığım double dəyər 5.5 idi ondalıq hissə olan 0.5 kəsilir.
 
         sc.close();
     }
