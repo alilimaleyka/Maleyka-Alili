@@ -3,24 +3,31 @@ import java.util.Scanner;
 public class Tapsiriq1 {
     public static void main(String[] args) {
 
-        // İstifadəçidən 1 tam ədəd alınır.
-        // Scannerdən gələn ədədin cüt və ya tək olduğunu, həmçinin müsbət, mənfi və ya sıfır olduğu təyin edilir.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Balı daxil et: ");
+        int bal = sc.nextInt();
 
-        Scanner eded = new Scanner(System.in);
-        System.out.print("Tam ədəd daxil edin: ");
-        int tamEded = eded.nextInt();
+        //Balı hərfi qiymətə çevir (90+ Əla, 70-89 Yaxşı, 50-69 Kafi, aşağı Qeyri-kafi)
+        //nəticəni "Bal: X → Qiymət: Y" formatında çap et.
 
-        if (tamEded % 2 == 0) {
-        System.out.println("Cüt ədəddir");
+        String qiymet;
+
+        if ( bal < 0 || bal > 100 ) {
+            System.out.println("Daxil edilən ballar 0 və 100 bal arasında olmalıdır"); //Bu hissəini scannerdə 105 bal yazandan sonra gördüm səhv geridönüş edir sonra yazdım.
         } else {
-            System.out.println("Tək ədəddir");
-        }
-        if (tamEded > 0) {
-            System.out.println("Müsbət ədəddir");
-        } else if (tamEded < 0) {
-            System.out.println("Mənfi ədəddir");
-        } else {
-            System.out.println("Ədəd sıfırdır");
+            if (bal >= 90) {
+                qiymet = "Əla";
+            } else if (bal >= 70) {
+                qiymet = "Yaxşı";
+            } else if (bal >=50) {
+                qiymet = "Kafi";
+            } else {
+            } qiymet = "Qeyri-kafi";
+
+            System.out.println("Bal: " + bal + " bal" + " Qiymət: " + qiymet);
+
+            sc.close();
         }
     }
+
 }

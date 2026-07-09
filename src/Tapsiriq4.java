@@ -3,14 +3,23 @@ import java.util.Scanner;
 public class Tapsiriq4 {
     public static void main(String[] args) {
 
-        // Scannerdə istifadəçidən il alınır.
-        // İlin uyğun il olub-olmadığı ternary operator ilə yoxlanılır.
+        Scanner sc = new Scanner(System.in);
+        int enCoxQol = 0;
+        int enYaxsiOyuncu = 0;
 
-        Scanner eded = new Scanner(System.in);
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + "-ci oyunçunun qol sayını daxil et: ");
+            int qol = sc.nextInt();
 
-        System.out.print("İli daxil edin: ");
-        int il = eded.nextInt();
+            if (qol > enCoxQol) {
+                enCoxQol = qol;
+                enYaxsiOyuncu = i;
+            }
+        }
 
-        System.out.println((il % 4 == 0 && il % 100 != 0) || il % 400 == 0 ? "Uyğun il" : "Uyğun deyil");
+        System.out.println("Ən çox qol vuran oyunçu: " + enYaxsiOyuncu + "-ci oyunçu");
+        System.out.println("Qol sayı: " + enCoxQol);
+
+        sc.close();
     }
 }

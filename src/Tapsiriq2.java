@@ -3,32 +3,27 @@ import java.util.Scanner;
 public class Tapsiriq2 {
     public static void main(String[] args) {
 
-        // İstifadəçidən 3 tam ədəd alınır.
-        // Bu ədədlər arasında ən böyük və ən kiçik olan tapılıb göstərilir.
+        Scanner sc = new Scanner(System.in);
+        int cem = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + "-ci tələbənin balını daxil et: ");
+            int bal = sc.nextInt();
 
-        Scanner eded = new Scanner(System.in);
-
-        System.out.print("1-ci tam ədədi daxil edin: ");
-        int a = eded.nextInt();
-        System.out.print("2-ci tam ədədi daxil edin: ");
-        int b = eded.nextInt();
-        System.out.print("3-cü tam ədədi daxil edin: ");
-        int c = eded.nextInt();
-
-        if (a >= b && a >= c) {
-            System.out.println("Ən böyük: " + a);
-        } else if (b >= a && b >= c) {
-            System.out.println("Ən böyük: " + b);
-        } else {
-            System.out.println("Ən böyük: " + c);
+            cem = cem + bal;
         }
 
-        if (a <= b && a <= c) {
-            System.out.println("Ən kiçik: " + a);
-        } else if (b <= a && b <= c) {
-            System.out.println("Ən kiçik: " + b);
+        //Orta bal 70-dən yuxarıdırsa "Sinif uğurludur", aşağıdırsa "Əlavə işə ehtiyac var" çap et.
+
+        double ortaBal = cem / 10.0;
+        System.out.println("Cəm: " + cem);
+        System.out.println("Orta bal: " + ortaBal);
+
+        if (ortaBal > 70) {
+            System.out.println("Sinif uğurludur");
         } else {
-            System.out.println("Ən kiçik: " + c);
+            System.out.println("Əlavə işə ehtiyac var");
         }
+
+        sc.close();
     }
 }

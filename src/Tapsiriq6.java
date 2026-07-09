@@ -3,40 +3,24 @@ import java.util.Scanner;
 public class Tapsiriq6 {
     public static void main(String[] args) {
 
-        // Switch ilə sadə kalkulyator əməliyyatları yerinə yetirilir.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Mobil nömrənizi qeyd edin: ");
+        String nomre = sc.next();
 
-        Scanner eded = new Scanner(System.in);
+        //İstifadəçidən mobil nömrə formatında ədəd (məs. kod hissəsi 050, 051, 055, 070, 077, 099-dan biri olmalıdır) daxil almağı simulyasiya et: kodu daxil et,
+        //uyğun operatoru (Bakcell, Azercell, Nar) çap et, uyğun deyilsə "Naməlum operator" yaz.
 
-        System.out.print("1-ci ədədi daxil edin: ");
-        double birinciEded = eded.nextDouble();
-        System.out.print("2-ci ədədi daxil edin: ");
-        double ikinciEded = eded.nextDouble();
-        System.out.print("Əməliyyat işarəsini daxil edin (+, -, *, /): ");
-        String emeliyyat = eded.next();
+        String qiymet;
 
-        switch (emeliyyat) {
-            case "+":
-                System.out.println("Nəticə: " + (birinciEded + ikinciEded));
-                break;
-
-            case "-":
-                System.out.println("Nəticə: " + (birinciEded - ikinciEded));
-                break;
-
-            case "*":
-                System.out.println("Nəticə: " + (birinciEded * ikinciEded));
-                break;
-
-            case "/":
-                if (ikinciEded == 0) {
-                    System.out.println("0-a bölmək olmaz!");
-                } else {
-                    System.out.println("Nəticə: " + (birinciEded / ikinciEded));
-                }
-                break;
-
-            default:
-                System.out.println("Naməlum əməliyyat işarəsi");
+        if (nomre.equals("050") || nomre.equals("051")) {
+            System.out.println("Operator: Azercell");
+        } else if (nomre.equals("055") || nomre.equals("099")) {
+            System.out.println("Operator: Bakcell");
+        } else if (nomre.equals("070") || nomre.equals("077")) {
+            System.out.println("Operator: Nar");
+        } else {
+            System.out.println("Naməlum operator");
         }
+        sc.close();
     }
 }
