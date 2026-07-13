@@ -9,7 +9,11 @@ public class Tapsiriq8 {
         int yas = sc.nextInt();
         int biletQiymeti = 0;
 
-        if (yas >= 0 && yas <= 6) {
+        if (yas < 0) {
+            System.out.println("Yaş mənfi ola bilməz!");
+            sc.close();
+            return;
+        } else if (yas <= 6) {
             biletQiymeti = 0;
         } else if (yas <= 17) {
             biletQiymeti = 2;
@@ -22,6 +26,13 @@ public class Tapsiriq8 {
         System.out.println("Bir biletin qiyməti: " + biletQiymeti + " AZN");
         System.out.print("Neçə bilet almaq istəyirsiniz: ");
         int biletSayi = sc.nextInt();
+
+        if (biletSayi < 0) {
+            System.out.println("Bilet sayı mənfi ola bilməz!");
+            sc.close();
+            return;
+        }
+
         int umumiMebleg = biletQiymeti * biletSayi;
         System.out.println("Ümumi məbləğ: " + umumiMebleg + " AZN");
 
