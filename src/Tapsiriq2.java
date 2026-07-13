@@ -4,26 +4,25 @@ public class Tapsiriq2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int cem = 0;
-        for (int i = 1; i <= 10; i++) {
-            System.out.print(i + "-ci tələbənin balını daxil et: ");
-            int bal = sc.nextInt();
+        double umumiSatis = 0;
 
-            cem = cem + bal;
+        for (int gun = 1; gun <= 3; gun++) {
+            System.out.print(gun + "-ci günün satışı: ");
+            double satis = sc.nextDouble();
+
+            umumiSatis = umumiSatis + satis;
         }
 
-        //Orta bal 70-dən yuxarıdırsa "Sinif uğurludur", aşağıdırsa "Əlavə işə ehtiyac var" çap et.
+        double ortaSatis = umumiSatis / 3.0;
 
-        double ortaBal = cem / 10.0;
-        System.out.println("Cəm: " + cem);
-        System.out.println("Orta bal: " + ortaBal);
+        System.out.println("Ümumi satış: " + umumiSatis + " AZN");
+        System.out.println("Orta günlük satış: " + ortaSatis + " AZN");
 
-        if (ortaBal > 70) {
-            System.out.println("Sinif uğurludur");
+        if (ortaSatis > 500) {
+            System.out.println("Həftə uğurludur");
         } else {
-            System.out.println("Əlavə işə ehtiyac var");
+            System.out.println("Satışı artırmaq lazımdır");
         }
-
         sc.close();
     }
 }

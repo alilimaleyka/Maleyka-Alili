@@ -4,21 +4,26 @@ public class Tapsiriq4 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int enCoxQol = 0;
-        int enYaxsiOyuncu = 0;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(i + "-ci oyunçunun qol sayını daxil et: ");
-            int qol = sc.nextInt();
+        double enAzVaxt = 0;
+        int enSuretliQacisci = 0;
 
-            if (qol > enCoxQol) {
-                enCoxQol = qol;
-                enYaxsiOyuncu = i;
-            }
+        for (int qacisci = 1; qacisci <= 3; qacisci++) {
+
+            System.out.print(qacisci + "-ci qaçışçının vaxtı: ");
+            double vaxt = sc.nextDouble();
+
+            if (qacisci == 1) {
+                enAzVaxt = vaxt;
+                enSuretliQacisci = qacisci;
+            } else if (vaxt < enAzVaxt) {
+                enAzVaxt = vaxt;
+                enSuretliQacisci = qacisci; }
         }
 
-        System.out.println("Ən çox qol vuran oyunçu: " + enYaxsiOyuncu + "-ci oyunçu");
-        System.out.println("Qol sayı: " + enCoxQol);
+        System.out.println("Ən sürətli qaçışçı: "
+                + enSuretliQacisci + "-ci qaçışçı");
+        System.out.println("Vaxtı: " + enAzVaxt + " saniyə");
 
         sc.close();
     }
