@@ -1,34 +1,16 @@
-import java.util.Scanner;
-
 public class Tapsiriq7 {
     public static void main(String[] args) {
 
-        final int gizliKod = 275;
-        int cehdSayi = 0;
+        //int[] ededler = {7, 12, 5, 20, 33, 46, 9}; massivində neçə cüt ədəd olduğunu tap və
+        // Cüt ədədlərin sayı: X formatında çap et. for-each dövrəsi istifadə olunmalıdır.
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Seyfin gizli kodunu (1-999 arasında) daxil edin: ");
-        int kod = sc.nextInt();
-        cehdSayi++;
-
-        while (kod != gizliKod) {
-            if (kod < 1 || kod > 999) {
-                System.out.println(
-                        "Seyf kodu 1-999 arasındadır, zəhmət olmasa uyğun kod daxil edin!");
-            } else if (kod > gizliKod) {
-                System.out.println("Böyükdür");
-            } else {
-                System.out.println("Kiçikdir");
+        int[] ededler = {7, 12, 5, 20, 33, 46, 9};
+        int say = 0;
+        for (int eded : ededler) {
+            if (eded % 2 == 0) {
+                say++;
             }
-
-            System.out.print("Kodu yenidən daxil edin: ");
-            kod = sc.nextInt(); cehdSayi++;
         }
-
-        System.out.println("Seyf açıldı!");
-        System.out.println("Cəhd sayı: " + cehdSayi);
-
-        sc.close();
+        System.out.println("Cüt ədədlərin sayı: " + say);
     }
 }

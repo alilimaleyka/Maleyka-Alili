@@ -1,27 +1,12 @@
-import java.util.Scanner;
-
 public class Tapsiriq1 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        //1-dən 10-a qədər olan ədədləri hər birini yeni sətirdə çap et. do-while dövrəsi istifadə olunmalıdır.
 
-        System.out.print("Havanın temperaturunu (°C, tam ədəd) daxil et: ");
-        int temperatur = sc.nextInt();
-
-        String status;
-
-        if (temperatur > 25) {
-            status = "İsti";
-        } else if (temperatur >= 15) {
-            status = "Mülayim";
-        } else if (temperatur >= 0) {
-            status = "Soyuq";
-        } else {
-            status = "Şaxta";
-        }
-
-        System.out.println("Temperatur: " + temperatur + "°C → Status: " + status);
-
-        sc.close();
+        int i = 1;
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 10);
     }
 }

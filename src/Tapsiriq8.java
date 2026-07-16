@@ -1,41 +1,16 @@
-import java.util.Scanner;
-
 public class Tapsiriq8 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        //int[] ballar = {67, 91, 54, 88, 73}; massivində ən böyük balı for-each ilə tap və çap et.
+        // Başlanğıc dəyər kimi 0 yox, massivin ilk elementini götür — dərsdə niyəsini danışdıq.
 
-        System.out.print("Yaşınızı daxil edin: ");
-        int yas = sc.nextInt();
-        int biletQiymeti = 0;
-
-        if (yas < 0) {
-            System.out.println("Yaş mənfi ola bilməz!");
-            sc.close();
-            return;
-        } else if (yas <= 6) {
-            biletQiymeti = 0;
-        } else if (yas <= 17) {
-            biletQiymeti = 2;
-        } else if (yas <= 60) {
-            biletQiymeti = 5;
-        } else {
-            biletQiymeti = 3;
+        int[] ballar = {67, 91, 54, 88, 73};
+        int enBoyukBal = ballar[0];
+        for (int bal : ballar) {
+            if (bal > enBoyukBal) {
+                enBoyukBal = bal;
+            }
         }
-
-        System.out.println("Bir biletin qiyməti: " + biletQiymeti + " AZN");
-        System.out.print("Neçə bilet almaq istəyirsiniz: ");
-        int biletSayi = sc.nextInt();
-
-        if (biletSayi < 0) {
-            System.out.println("Bilet sayı mənfi ola bilməz!");
-            sc.close();
-            return;
-        }
-
-        int umumiMebleg = biletQiymeti * biletSayi;
-        System.out.println("Ümumi məbləğ: " + umumiMebleg + " AZN");
-
-        sc.close();
+        System.out.println("Ən böyük bal: " + enBoyukBal);
     }
 }

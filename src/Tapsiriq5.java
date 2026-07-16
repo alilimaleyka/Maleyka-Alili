@@ -1,13 +1,13 @@
 public class Tapsiriq5 {
     public static void main(String[] args) {
 
-        double ilkinQiymet = 1000;
-        double artmisQiymet = ilkinQiymet;
-        int il = 0;
+        //int[] ededler = {4, 8, 15, 16, 23, 42}; massivinin bütün elementlərini for-each ilə hər birini yeni sətirdə çap et.
+        // Sonda length istifadə edərək Element sayı: 6 çap et.
 
-        while (artmisQiymet < ilkinQiymet * 2) {
-            artmisQiymet = artmisQiymet + artmisQiymet * 8 / 100; il++;
-            System.out.println("İl " + il + ": " + artmisQiymet + " AZN"); }
-        System.out.println("Ümumi il sayı: " + il);
+        int[] ededler = {4, 8, 15, 16, 23, 42};
+        for (int eded : ededler) {
+            System.out.println(eded);
+        }
+        System.out.println("Element sayı: " + ededler.length);
     }
 }

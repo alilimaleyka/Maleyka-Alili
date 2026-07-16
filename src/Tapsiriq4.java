@@ -3,27 +3,22 @@ import java.util.Scanner;
 public class Tapsiriq4 {
     public static void main(String[] args) {
 
+        //Scanner ilə istifadəçidən bir-bir ədədlər al. İstifadəçi 0 daxil edənə qədər ədədləri cəmlə (0 özü cəmə daxil deyil).
+        // Sonda cəmi Cəm: X formatında çap et. do-while dövrəsi istifadə olunmalıdır.
+
         Scanner sc = new Scanner(System.in);
 
-        double enAzVaxt = 0;
-        int enSuretliQacisci = 0;
+        int eded;
+        int cem = 0;
+        do {
+            System.out.print("Ədəd daxil edin: ");
+            eded = sc.nextInt();
+            if (eded != 0) {
+                cem = cem + eded;
+            }
 
-        for (int qacisci = 1; qacisci <= 3; qacisci++) {
-
-            System.out.print(qacisci + "-ci qaçışçının vaxtı: ");
-            double vaxt = sc.nextDouble();
-
-            if (qacisci == 1) {
-                enAzVaxt = vaxt;
-                enSuretliQacisci = qacisci;
-            } else if (vaxt < enAzVaxt) {
-                enAzVaxt = vaxt;
-                enSuretliQacisci = qacisci; }
-        }
-
-        System.out.println("Ən sürətli qaçışçı: "
-                + enSuretliQacisci + "-ci qaçışçı");
-        System.out.println("Vaxtı: " + enAzVaxt + " saniyə");
+        } while (eded != 0);
+        System.out.println("Cəm: " + cem);
 
         sc.close();
     }

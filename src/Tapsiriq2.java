@@ -1,27 +1,12 @@
-import java.util.Scanner;
-
 public class Tapsiriq2 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        double umumiSatis = 0;
+        //2-nin vurma cədvəlini 1-dən 10-a qədər 2 x 1 = 2 formatında çap et. do-while dövrəsi istifadə olunmalıdır.
 
-        for (int gun = 1; gun <= 3; gun++) {
-            System.out.print(gun + "-ci günün satışı: ");
-            double satis = sc.nextDouble();
-            umumiSatis = umumiSatis + satis;
-        }
-
-        double ortaSatis = umumiSatis / 3.0;
-        System.out.println("Ümumi satış: " + umumiSatis + " AZN");
-        System.out.println("Orta günlük satış: " + ortaSatis + " AZN");
-
-        if (ortaSatis > 500) {
-            System.out.println("Həftə uğurludur");
-        } else {
-            System.out.println("Satışı artırmaq lazımdır");
-        }
-
-        sc.close();
+        int i = 1;
+        do {
+            System.out.println("2 x " + i + " = " + (2 * i));
+            i++;
+        } while (i <= 10);
     }
 }
