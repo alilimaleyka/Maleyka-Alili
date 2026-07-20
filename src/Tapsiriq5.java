@@ -1,13 +1,12 @@
 public class Tapsiriq5 {
+
+    //Kalkulyator sinfində eyni adlı vurma metodunu üç fərqli formada yaz: iki tam ədəd, üç tam ədəd və iki kəsr ədəd üçün.
+    // Proqramda hər üç variantı çağır və nəticələri çap et.
     public static void main(String[] args) {
 
-        //int[] ededler = {4, 8, 15, 16, 23, 42}; massivinin bütün elementlərini for-each ilə hər birini yeni sətirdə çap et.
-        // Sonda length istifadə edərək Element sayı: 6 çap et.
-
-        int[] ededler = {4, 8, 15, 16, 23, 42};
-        for (int eded : ededler) {
-            System.out.println(eded);
-        }
-        System.out.println("Element sayı: " + ededler.length);
+        Kalkulyator kalkulyator = new Kalkulyator();
+        kalkulyator.vur(4, 5);
+        kalkulyator.vur(2, 3, 4);
+        kalkulyator.vur(2.5, 4.0);
     }
 }

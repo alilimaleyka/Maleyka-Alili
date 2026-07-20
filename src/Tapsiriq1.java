@@ -1,12 +1,33 @@
 public class Tapsiriq1 {
+
+    //Telefon sinfi yarat. Batareya faizi kənardan birbaşa dəyişdirilə bilməsin —
+    // dəyər yalnız nəzarətli yolla təyin olunsun
+    // və yalnız 0–100 aralığı qəbul edilsin, kənar dəyərdə xəta mesajı çap olunsun. Faizi oxumaq da mümkün olsun.
+    // Proqramda bir neçə fərqli dəyərlə (düzgün və yanlış) yoxla və son vəziyyəti çap et.
+
+    private int batareyaFaizi;
+
+    public void setBatareyaFaizi(int yeniFaiz) {
+
+        if (yeniFaiz >= 0 && yeniFaiz <= 100) {
+            batareyaFaizi = yeniFaiz;
+        } else {
+            System.out.println("Xəta: Batareya faizi 0-100 arasında olmalıdır.");
+        }
+    }
+    public void batareyaFaiziniGoster() {
+        System.out.println("Batareyanın son vəziyyəti: "
+                + batareyaFaizi + "%");
+    }
     public static void main(String[] args) {
 
-        //1-dən 10-a qədər olan ədədləri hər birini yeni sətirdə çap et. do-while dövrəsi istifadə olunmalıdır.
+        Tapsiriq1 telefon = new Tapsiriq1();
 
-        int i = 1;
-        do {
-            System.out.println(i);
-            i++;
-        } while (i <= 10);
+        telefon.setBatareyaFaizi(70);
+        telefon.setBatareyaFaizi(120);
+        telefon.setBatareyaFaizi(-10);
+        telefon.setBatareyaFaizi(85);
+
+        telefon.batareyaFaiziniGoster();
     }
 }

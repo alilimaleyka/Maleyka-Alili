@@ -1,16 +1,13 @@
 public class Tapsiriq8 {
+
+    //Bankomat sinfində balans gizli saxlanılsın. İstifadəçinin görəcəyi yeganə metod pul çəkmək olsun — məbləği o qəbul
+    // etsin, yoxlama isə arxada gizli metodda getsin: balans kifayət etmirsə imtina mesajı, edirsə çəkilən məbləğ və
+    // qalıq çap olunsun. Proqramda bir uğursuz və bir uğurlu çəkim et.
+
     public static void main(String[] args) {
 
-        //int[] ballar = {67, 91, 54, 88, 73}; massivində ən böyük balı for-each ilə tap və çap et.
-        // Başlanğıc dəyər kimi 0 yox, massivin ilk elementini götür — dərsdə niyəsini danışdıq.
-
-        int[] ballar = {67, 91, 54, 88, 73};
-        int enBoyukBal = ballar[0];
-        for (int bal : ballar) {
-            if (bal > enBoyukBal) {
-                enBoyukBal = bal;
-            }
-        }
-        System.out.println("Ən böyük bal: " + enBoyukBal);
+        Bankomat bankomat = new Bankomat();
+        bankomat.pulCek(700);
+        bankomat.pulCek(200);
     }
 }
