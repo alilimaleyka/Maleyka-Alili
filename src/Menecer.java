@@ -1,6 +1,8 @@
 public class Menecer extends Isci {
 
-    void iclasKecir() {
-        System.out.println(ad + " iclas keçirir.");
+    int komandaSayi;
+    public Menecer(String ad, int komandaSayi) {
+        super(ad);
+        this.komandaSayi = komandaSayi;
     }
 }
