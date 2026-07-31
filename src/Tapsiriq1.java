@@ -1,27 +1,24 @@
+import java.security.cert.PolicyQualifierInfo;
 import java.util.Scanner;
 
 public class Tapsiriq1 {
-    public static void main(String[] args) {
+    public static void main (String [] args) {
+        //Ad: Leyla Məmmədova
+        //Yaş: 24
+        //Maaş: 1450.50
+        //Aktiv: true
+        //Şöbə: Q
 
-        Scanner scanner = new Scanner(System.in);
-        int umumiXerc = 1240;
+        String adSoyad = "Leyla Məmmədova";
+                System.out.println("Ad: Leyla Məmmədova");
+        int yas = 24;
+        System.out.println("Yaş: 24");
+        double maas = 1450.50;
+        System.out.println("Maaş: 1450.50");
+        boolean aktiv = true;
+        System.out.println("Aktiv: true");
+        char sobe = 'Q';
+        System.out.println("Şöbə: Q");
 
-        try {
-            System.out.print("Əməliyyat sayını daxil edin: ");
-            int emeliyyatSayi = scanner.nextInt();
-            int ortaMebleg = umumiXerc / emeliyyatSayi;
-            System.out.println("Orta əməliyyat məbləği: " + ortaMebleg);
-
-        } catch (ArithmeticException e) {
-            System.out.println("Əməliyyat sayı 0 ola bilməz.");
-
-        } catch (Exception e) {
-            System.out.println("Xəta baş verdi.");
-
-        } finally {
-            System.out.println("Hesabat tamamlandı");
-        }
-
-        scanner.close();
     }
 }
